@@ -1,8 +1,22 @@
-<h1>Hello</h1>
+<h1>Contacts</h1>
 
-<% @contacts.each do |contact| %>
-  <%= contact.name %>
-  <%= contact.age %>
-  <%= contact.number %>
-  <%= contact.email %>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Number</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.name %></td>
+        <td><%= contact.age %></td>
+        <td><%= contact.number %></td>
+        <td><%= contact.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
