@@ -1,11 +1,28 @@
 <%= form_for @contact do |form| %>
-  Name<br>
-  <%= form.text_field :name %>
-  Age<br>
-  <%= form.text_field :age %>
-  Number<br>
-  <%= form.text_field :number %>
-  Email<br>
-  <%= form.text_field :email %>
-  <%= form.submit %>
+
+  <div class="fields">
+    Name<br>
+    <%= form.text_field :name, required: true %>
+  </div><br>
+
+  <div class="fields">
+    Age<br>
+    <%= form.text_field :age, required: true %>
+  </div><br>
+
+  <div class="fields">
+    Number<br>
+    <%= form.text_field :number, required: true %>
+  </div><br>
+
+  <div class="fields">
+    Email<br>
+    <%= form.email_field :email, required: true %>
+  </div><br>
+
+ <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>
+
+<%= link_to "back", contacts_path %>
