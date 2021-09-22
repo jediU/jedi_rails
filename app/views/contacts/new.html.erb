@@ -1,0 +1,11 @@
+<%= form_for @contact do |form| %>
+  Name<br>
+  <%= form.text_field :name %>
+  Age<br>
+  <%= form.text_field :age %>
+  Number<br>
+  <%= form.text_field :number %>
+  Email<br>
+  <%= form.text_field :email %>
+  <%= form.submit %>
+<% end %>
